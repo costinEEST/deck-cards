@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useCallback } from "react"
 
 /**
  * https://bost.ocks.org/mike/shuffle
@@ -86,6 +86,151 @@ const allCards = [
       </svg>
     ),
     name: "Ace of clubs",
+    value: 52,
+  },
+  {
+    svg: (
+      <svg
+        width={240}
+        height={336}
+        viewBox="-120 -168 240 336"
+        preserveAspectRatio="none"
+      >
+        <symbol
+          id="ten-clubs__b"
+          viewBox="-600 -600 1200 1200"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path d="M30 150c5 235 55 250 100 350h-260c45-100 95-115 100-350a10 10 0 00-20 0 210 210 0 11-74-201 10 10 0 0014-14 230 230 0 11220 0 10 10 0 0014 14 210 210 0 11-74 201 10 10 0 00-20 0z" />
+        </symbol>
+        <symbol
+          id="ten-clubs__a"
+          viewBox="-500 -500 1000 1000"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M-260 430v-860M-50 0v-310a150 150 0 01300 0v620a150 150 0 01-300 0z"
+            stroke="#000"
+            strokeWidth={80}
+            strokeLinecap="square"
+            strokeMiterlimit={1.5}
+            fill="none"
+          />
+        </symbol>
+        <rect
+          width={239}
+          height={335}
+          x={-119.5}
+          y={-167.5}
+          rx={12}
+          ry={12}
+          fill="#fff"
+          stroke="#000"
+        />
+        <use
+          xlinkHref="#ten-clubs__a"
+          height={32}
+          width={32}
+          x={-114.4}
+          y={-156}
+        />
+        <use
+          xlinkHref="#ten-clubs__b"
+          height={26.769}
+          width={26.769}
+          x={-111.784}
+          y={-119}
+        />
+        <use
+          xlinkHref="#ten-clubs__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-135.588}
+        />
+        <use
+          xlinkHref="#ten-clubs__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-135.588}
+        />
+        <use
+          xlinkHref="#ten-clubs__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-68.529}
+        />
+        <use
+          xlinkHref="#ten-clubs__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-68.529}
+        />
+        <use
+          xlinkHref="#ten-clubs__b"
+          height={70}
+          width={70}
+          x={-35}
+          y={-102.058}
+        />
+        <g transform="rotate(180)">
+          <use
+            xlinkHref="#ten-clubs__a"
+            height={32}
+            width={32}
+            x={-114.4}
+            y={-156}
+          />
+          <use
+            xlinkHref="#ten-clubs__b"
+            height={26.769}
+            width={26.769}
+            x={-111.784}
+            y={-119}
+          />
+          <use
+            xlinkHref="#ten-clubs__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-135.588}
+          />
+          <use
+            xlinkHref="#ten-clubs__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-135.588}
+          />
+          <use
+            xlinkHref="#ten-clubs__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-68.529}
+          />
+          <use
+            xlinkHref="#ten-clubs__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-68.529}
+          />
+          <use
+            xlinkHref="#ten-clubs__b"
+            height={70}
+            width={70}
+            x={-35}
+            y={-102.058}
+          />
+        </g>
+      </svg>
+    ),
+    name: "Ten of clubs",
+    value: 50,
   },
   {
     svg: (
@@ -141,6 +286,370 @@ const allCards = [
       </svg>
     ),
     name: "Ace of spades",
+    value: 41,
+  },
+  {
+    svg: (
+      <svg
+        width={240}
+        height={336}
+        viewBox="-120 -168 240 336"
+        preserveAspectRatio="none"
+      >
+        <symbol
+          id="ten-spades__b"
+          viewBox="-600 -600 1200 1200"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path d="M0-500c100 250 355 400 355 685a150 150 0 01-300 0 10 10 0 00-20 0c0 200 50 215 95 315h-260c45-100 95-115 95-315a10 10 0 00-20 0 150 150 0 01-300 0c0-285 255-435 355-685z" />
+        </symbol>
+        <symbol
+          id="ten-spades__a"
+          viewBox="-500 -500 1000 1000"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M-260 430v-860M-50 0v-310a150 150 0 01300 0v620a150 150 0 01-300 0z"
+            stroke="#000"
+            strokeWidth={80}
+            strokeLinecap="square"
+            strokeMiterlimit={1.5}
+            fill="none"
+          />
+        </symbol>
+        <rect
+          width={239}
+          height={335}
+          x={-119.5}
+          y={-167.5}
+          rx={12}
+          ry={12}
+          fill="#fff"
+          stroke="#000"
+        />
+        <use
+          xlinkHref="#ten-spades__a"
+          height={32}
+          width={32}
+          x={-114.4}
+          y={-156}
+        />
+        <use
+          xlinkHref="#ten-spades__b"
+          height={26.769}
+          width={26.769}
+          x={-111.784}
+          y={-119}
+        />
+        <use
+          xlinkHref="#ten-spades__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-135.501}
+        />
+        <use
+          xlinkHref="#ten-spades__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-135.501}
+        />
+        <use
+          xlinkHref="#ten-spades__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-68.5}
+        />
+        <use
+          xlinkHref="#ten-spades__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-68.5}
+        />
+        <use
+          xlinkHref="#ten-spades__b"
+          height={70}
+          width={70}
+          x={-35}
+          y={-102}
+        />
+        <g transform="rotate(180)">
+          <use
+            xlinkHref="#ten-spades__a"
+            height={32}
+            width={32}
+            x={-114.4}
+            y={-156}
+          />
+          <use
+            xlinkHref="#ten-spades__b"
+            height={26.769}
+            width={26.769}
+            x={-111.784}
+            y={-119}
+          />
+          <use
+            xlinkHref="#ten-spades__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-135.501}
+          />
+          <use
+            xlinkHref="#ten-spades__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-135.501}
+          />
+          <use
+            xlinkHref="#ten-spades__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-68.5}
+          />
+          <use
+            xlinkHref="#ten-spades__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-68.5}
+          />
+          <use
+            xlinkHref="#ten-spades__b"
+            height={70}
+            width={70}
+            x={-35}
+            y={-102}
+          />
+        </g>
+      </svg>
+    ),
+    name: "Ten of spades",
+    value: 39,
+  },
+  {
+    svg: (
+      <svg
+        width={240}
+        height={336}
+        viewBox="-120 -168 240 336"
+        preserveAspectRatio="none"
+      >
+        <symbol
+          id="heart__b"
+          viewBox="-500 -500 1000 1000"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M-270 460h160m-90-10L0-460l200 910m-90 10h160m-390-330h240"
+            stroke="red"
+            strokeWidth={80}
+            strokeLinecap="square"
+            strokeMiterlimit={1.5}
+            fill="none"
+          />
+        </symbol>
+        <symbol
+          id="heart__a"
+          viewBox="-600 -600 1200 1200"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M0-300c0-100 100-200 200-200s200 100 200 250C400 0 0 400 0 500 0 400-400 0-400-250c0-150 100-250 200-250S0-400 0-300z"
+            fill="red"
+          />
+        </symbol>
+        <rect
+          width={239}
+          height={335}
+          x={-119.5}
+          y={-167.5}
+          rx={12}
+          ry={12}
+          fill="#fff"
+          stroke="#000"
+        />
+        <use xlinkHref="#heart__a" height={70} width={70} x={-35} y={-35} />
+        <use xlinkHref="#heart__b" height={32} width={32} x={-114.4} y={-156} />
+        <use
+          xlinkHref="#heart__a"
+          height={26.769}
+          width={26.769}
+          x={-111.784}
+          y={-119}
+        />
+        <g transform="rotate(180)">
+          <use
+            xlinkHref="#heart__b"
+            height={32}
+            width={32}
+            x={-114.4}
+            y={-156}
+          />
+          <use
+            xlinkHref="#heart__a"
+            height={26.769}
+            width={26.769}
+            x={-111.784}
+            y={-119}
+          />
+        </g>
+      </svg>
+    ),
+    name: "Ace of heart",
+    value: 30,
+  },
+  {
+    svg: (
+      <svg
+        width={240}
+        height={336}
+        viewBox="-120 -168 240 336"
+        preserveAspectRatio="none"
+      >
+        <symbol
+          id="ten-hearts__b"
+          viewBox="-600 -600 1200 1200"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M0-300c0-100 100-200 200-200s200 100 200 250C400 0 0 400 0 500 0 400-400 0-400-250c0-150 100-250 200-250S0-400 0-300z"
+            fill="red"
+          />
+        </symbol>
+        <symbol
+          id="ten-hearts__a"
+          viewBox="-500 -500 1000 1000"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M-260 430v-860M-50 0v-310a150 150 0 01300 0v620a150 150 0 01-300 0z"
+            stroke="red"
+            strokeWidth={80}
+            strokeLinecap="square"
+            strokeMiterlimit={1.5}
+            fill="none"
+          />
+        </symbol>
+        <rect
+          width={239}
+          height={335}
+          x={-119.5}
+          y={-167.5}
+          rx={12}
+          ry={12}
+          fill="#fff"
+          stroke="#000"
+        />
+        <use
+          xlinkHref="#ten-hearts__a"
+          height={32}
+          width={32}
+          x={-114.4}
+          y={-156}
+        />
+        <use
+          xlinkHref="#ten-hearts__b"
+          height={26.769}
+          width={26.769}
+          x={-111.784}
+          y={-119}
+        />
+        <use
+          xlinkHref="#ten-hearts__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-135.501}
+        />
+        <use
+          xlinkHref="#ten-hearts__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-135.501}
+        />
+        <use
+          xlinkHref="#ten-hearts__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-68.5}
+        />
+        <use
+          xlinkHref="#ten-hearts__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-68.5}
+        />
+        <use
+          xlinkHref="#ten-hearts__b"
+          height={70}
+          width={70}
+          x={-35}
+          y={-102}
+        />
+        <g transform="rotate(180)">
+          <use
+            xlinkHref="#ten-hearts__a"
+            height={32}
+            width={32}
+            x={-114.4}
+            y={-156}
+          />
+          <use
+            xlinkHref="#ten-hearts__b"
+            height={26.769}
+            width={26.769}
+            x={-111.784}
+            y={-119}
+          />
+          <use
+            xlinkHref="#ten-hearts__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-135.501}
+          />
+          <use
+            xlinkHref="#ten-hearts__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-135.501}
+          />
+          <use
+            xlinkHref="#ten-hearts__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-68.5}
+          />
+          <use
+            xlinkHref="#ten-hearts__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-68.5}
+          />
+          <use
+            xlinkHref="#ten-hearts__b"
+            height={70}
+            width={70}
+            x={-35}
+            y={-102}
+          />
+        </g>
+      </svg>
+    ),
+    name: "Ten of hearts",
+    value: 28,
   },
   {
     svg: (
@@ -218,6 +727,7 @@ const allCards = [
       </svg>
     ),
     name: "Ace of diamonds",
+    value: 19,
   },
   {
     svg: (
@@ -228,27 +738,27 @@ const allCards = [
         preserveAspectRatio="none"
       >
         <symbol
-          id="heart__b"
+          id="ten-diamonds__b"
+          viewBox="-600 -600 1200 1200"
+          preserveAspectRatio="xMinYMid"
+        >
+          <path
+            d="M-400 0C-350 0 0-450 0-500 0-450 350 0 400 0 350 0 0 450 0 500 0 450-350 0-400 0z"
+            fill="red"
+          />
+        </symbol>
+        <symbol
+          id="ten-diamonds__a"
           viewBox="-500 -500 1000 1000"
           preserveAspectRatio="xMinYMid"
         >
           <path
-            d="M-270 460h160m-90-10L0-460l200 910m-90 10h160m-390-330h240"
+            d="M-260 430v-860M-50 0v-310a150 150 0 01300 0v620a150 150 0 01-300 0z"
             stroke="red"
             strokeWidth={80}
             strokeLinecap="square"
             strokeMiterlimit={1.5}
             fill="none"
-          />
-        </symbol>
-        <symbol
-          id="heart__a"
-          viewBox="-600 -600 1200 1200"
-          preserveAspectRatio="xMinYMid"
-        >
-          <path
-            d="M0-300c0-100 100-200 200-200s200 100 200 250C400 0 0 400 0 500 0 400-400 0-400-250c0-150 100-250 200-250S0-400 0-300z"
-            fill="red"
           />
         </symbol>
         <rect
@@ -261,49 +771,181 @@ const allCards = [
           fill="#fff"
           stroke="#000"
         />
-        <use xlinkHref="#heart__a" height={70} width={70} x={-35} y={-35} />
-        <use xlinkHref="#heart__b" height={32} width={32} x={-114.4} y={-156} />
         <use
-          xlinkHref="#heart__a"
+          xlinkHref="#ten-diamonds__a"
+          height={32}
+          width={32}
+          x={-114.4}
+          y={-156}
+        />
+        <use
+          xlinkHref="#ten-diamonds__b"
           height={26.769}
           width={26.769}
           x={-111.784}
           y={-119}
         />
+        <use
+          xlinkHref="#ten-diamonds__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-135.501}
+        />
+        <use
+          xlinkHref="#ten-diamonds__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-135.501}
+        />
+        <use
+          xlinkHref="#ten-diamonds__b"
+          height={70}
+          width={70}
+          x={-87.501}
+          y={-68.5}
+        />
+        <use
+          xlinkHref="#ten-diamonds__b"
+          height={70}
+          width={70}
+          x={17.501}
+          y={-68.5}
+        />
+        <use
+          xlinkHref="#ten-diamonds__b"
+          height={70}
+          width={70}
+          x={-35}
+          y={-102}
+        />
         <g transform="rotate(180)">
           <use
-            xlinkHref="#heart__b"
+            xlinkHref="#ten-diamonds__a"
             height={32}
             width={32}
             x={-114.4}
             y={-156}
           />
           <use
-            xlinkHref="#heart__a"
+            xlinkHref="#ten-diamonds__b"
             height={26.769}
             width={26.769}
             x={-111.784}
             y={-119}
           />
+          <use
+            xlinkHref="#ten-diamonds__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-135.501}
+          />
+          <use
+            xlinkHref="#ten-diamonds__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-135.501}
+          />
+          <use
+            xlinkHref="#ten-diamonds__b"
+            height={70}
+            width={70}
+            x={-87.501}
+            y={-68.5}
+          />
+          <use
+            xlinkHref="#ten-diamonds__b"
+            height={70}
+            width={70}
+            x={17.501}
+            y={-68.5}
+          />
+          <use
+            xlinkHref="#ten-diamonds__b"
+            height={70}
+            width={70}
+            x={-35}
+            y={-102}
+          />
         </g>
       </svg>
     ),
-    name: "Ace of heart",
+    name: "Ten of diamonds",
+    value: 17,
   },
 ]
 
 export function App() {
   const [cards, setCards] = useState([...allCards])
+  const [countTakenCards, setCountTakenCards] = useState("")
 
   const handleShuffle = () => setCards([...shuffle(allCards)])
 
+  const handleSubmitTakenCards = useCallback(
+    (event) => {
+      event.preventDefault()
+
+      setCards([...shuffle(cards.slice(+countTakenCards))])
+    },
+    [cards, countTakenCards]
+  )
+
+  const handleReset = () => setCards([...allCards])
+
+  const handleSorted = () =>
+    setCards([...allCards.sort((a, b) => b.value - a.value)])
+
   return (
     <div>
-      <button onClick={handleShuffle}>Shuffle</button>
+      <div className="flex flex-col flex-wrap justify-center items-center py-4">
+        <button className="button rounded" onClick={handleShuffle}>
+          Shuffle
+        </button>
 
-      {cards?.map(({ svg }, i) => (
-        <span key={i}>{svg}</span>
-      ))}
+        <form
+          className="flex items-center"
+          onSubmit={countTakenCards === "" ? () => {} : handleSubmitTakenCards}
+        >
+          <input
+            value={countTakenCards}
+            onChange={({ target: { value } }) => setCountTakenCards(value)}
+            type="number"
+            min="1"
+            max="8"
+            placeholder="(1-8)"
+            className="w-8 mx-2 py-1 rounded"
+          />
+
+          <button
+            className={`button rounded ${
+              countTakenCards === "" ? "pointer-events-none opacity-50" : ""
+            }`}
+          >
+            Draw {countTakenCards} card{countTakenCards > 1 ? "s" : ""} from the
+            deck
+          </button>
+        </form>
+
+        <button className="button rounded" onClick={handleSorted}>
+          Sort descending
+        </button>
+
+        <button className="button rounded" onClick={handleReset}>
+          Full deck
+        </button>
+      </div>
+
+      <div className="flex flex-wrap justify-center">
+        {cards?.map(({ svg, value }, i) => (
+          <div key={i} className="mx-2">
+            {svg}
+            <p className="text-center">Value: {value}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
